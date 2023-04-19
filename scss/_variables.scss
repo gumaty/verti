@@ -10,3 +10,12 @@ $size-width1200: 1200px;
 $size-width960: 960px;
 $size-width820: 820px;
 $size-min-width: 273px;
+
+body, html {
+  background-color: #E4E4E4;
+  font-family: $font-open;
+  color: #444444;
+}
+img {
+  width: 100%;
+}

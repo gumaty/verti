@@ -6,10 +6,4 @@
 @import "header";
 @import "banner";
 @import "features";
-
-
-body, html {
-  background-color: #E4E4E4;
-  font-family: $font-open;
-  color: #444444;
-}
+@import "hero";
