@@ -1,9 +1,11 @@
 .banner {
+
   .banner__container {
     background-color: #fff;
     display: flex;
     margin: 0 auto;
     width: $size-width1200;
+    min-width: $size-min-width;
     padding: 66px;
     border-radius: 6px;
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
@@ -24,6 +26,7 @@
 
       .banner__btn {
         display: block;
+        position: relative;
         background-color: #0090c5;
         color: #ffffff;
         font-size: 36px;
@@ -34,18 +37,38 @@
         border-radius: 6px;
         cursor: pointer;
         transition: background-color .25s ease-in-out;
+        &::before {
+          position: absolute;
+          content: "\f0a9";
+          font-family: 'Font Awesome 5 Free', sans-serif;
+          font-weight: 900;
+          top: 50%;
+          right: 15px;
+          transform: translate(0, -50%);
+        }
 
         &.btn--white {
           margin:0;
           background-color: #0000000D;
           color: #444444;
+          &::before {
+            position: absolute;
+            display: inline-block;
+            content: "\f059";
+            font-family: "Font Awesome 5 Free", sans-serif;
+            top: 50%;
+            right: 15px;
+            transform: translate(0, -50%);
+          }
         }
       }
     }
 
   }
+}
+@media (max-width: 1280px) {
+  .banner {
 
-  @media (max-width: 1280px) {
     .banner__container {
       width: $size-width960;
 
@@ -62,39 +85,55 @@
           font-size: 33px;
         }
       }
-      }
-  }
+    }
 
-  @media (max-width: 980px) {
+  }
+}
+
+@media (max-width: 980px) {
+  .banner {
+
     .banner__container {
       flex-direction: column;
       width: 90%;
-      col-12--medium {}
 
       .banner__hdl {
-        width: 100%;
         text-align: center;
       }
 
       .banner__txt {
-        width: 100%;
         text-align: center;
       }
 
       .box__btn {
-        width: 100%;
+        padding: 25px 0 0 25px;
         .banner__btn {
           text-align: center;
+          &::before {
+            position: relative;
+
+          }
+          &.btn--white {
+            &::before {
+              position: relative;
+              transform: none;
+            }
+          }
         }
       }
 
     }
-  }
 
-  @media (max-width: 736px) {
+  }
+}
+
+@media (max-width: 736px) {
+  .banner {
+    padding: 15px;
+
     .banner__container {
       width: 100%;
-      margin: 0 36.2031px;
+      margin: 0;
       padding: 15px;
 
       .banner__hdl {
@@ -105,12 +144,12 @@
         font-size: 22px;
       }
       .box__btn {
-        padding: 0;
+        padding: 20px 0 0 20px;
         .banner__btn {
           font-size: 18.3333px;
         }
       }
     }
-  }
 
+  }
 }
