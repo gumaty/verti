@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import "reset";
+@import "normalize";
+@import "variables";
+@import "grid";
+@import "header";
+@import "banner";
+@import "features";
+
+body, html {
+  background-color: #E4E4E4;
+  font-family: $font-open;
+  color: #444444;
+}

@@ -1,0 +1,119 @@
+.header {
+  padding: 72px 0 0;
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $size-width1200;
+  margin: 0 auto;
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    h1 {
+      .logo__link {
+        display: inline-block;
+        font-family: $font-oleo;
+        font-size: 52px;
+        padding: 13px 10.4px;
+        background-color: $color-bg-logo;
+        color: #ffffff;
+        text-decoration: none;
+
+        border-radius: 6px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        vertical-align: middle;
+      }
+    }
+    .logo__info {
+      font-size: 14.4px;
+      font-weight: 800;
+      line-height: 59.4px;
+
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 21.6px;
+    .nav__item {
+      display: inline-block;
+      padding: 7.2px 14.4px;
+      font-size: 14.4px;
+      font-weight: 800;
+      color: #696969;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color .25s ease-in-out;
+
+
+      &:hover {
+        background-color: #fff;
+      }
+      &.btn--primary {
+        background-color: #444444;
+        color: #ffffff;
+      }
+    }
+  }
+
+
+}
+
+  @media (max-width: 1280px) {
+    .header__container {
+      width: $size-width960;
+
+      .nav {
+        gap: 19.6px;
+        .nav__item {
+          padding: 6.6px 13.2px;
+          font-size: 13.2px;
+        }
+      }
+      .logo {
+        gap: 16.5px;
+
+        h1 {
+          .logo__link {
+            font-size: 47.6667px;
+            padding: 11.9167px 9.53333px;
+            letter-spacing: 0.05em;
+            vertical-align: middle;
+          }
+        }
+
+        .logo__info {
+          font-size: 13.2px;
+          font-weight: 800;
+
+        }
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    .header__container {
+      max-width: 100%;
+      justify-content: center;
+
+      .nav {
+        display: none;
+      }
+
+      .logo {
+        flex-direction: column;
+        align-self: center;
+        gap: 0;
+      }
+    }
+  }
+
+  @media (max-width: 736px) {
+
+  }
+}
+

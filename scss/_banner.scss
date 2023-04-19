@@ -1,0 +1,116 @@
+.banner {
+  .banner__container {
+    background-color: #fff;
+    display: flex;
+    margin: 0 auto;
+    width: $size-width1200;
+    padding: 66px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+
+    .banner__hdl {
+      margin: 5.6px 0 19.6px;
+      font-size: 56px;
+      font-weight: 800;
+    }
+    .banner__txt {
+      font-size: 44px;
+      line-height: 1.35em;
+      font-weight: 300;
+    }
+    .box__btn {flex-direction: column;
+      display: flex;
+      padding: 0 0 0 40px;
+
+      .banner__btn {
+        display: block;
+        background-color: #0090c5;
+        color: #ffffff;
+        font-size: 36px;
+        text-decoration: none;
+        font-weight: 800;
+        padding: 28.8px 32.4px;
+        margin-bottom: 16.5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color .25s ease-in-out;
+
+        &.btn--white {
+          margin:0;
+          background-color: #0000000D;
+          color: #444444;
+        }
+      }
+    }
+
+  }
+
+  @media (max-width: 1280px) {
+    .banner__container {
+      width: $size-width960;
+
+      .banner__hdl {
+        display: block;
+        font-size: 51.3333px;
+      }
+      .banner__txt {
+        font-size: 40.3333px;
+      }
+      .box__btn {
+        padding: 0;
+        .banner__btn {
+          font-size: 33px;
+        }
+      }
+      }
+  }
+
+  @media (max-width: 980px) {
+    .banner__container {
+      flex-direction: column;
+      width: 90%;
+      col-12--medium {}
+
+      .banner__hdl {
+        width: 100%;
+        text-align: center;
+      }
+
+      .banner__txt {
+        width: 100%;
+        text-align: center;
+      }
+
+      .box__btn {
+        width: 100%;
+        .banner__btn {
+          text-align: center;
+        }
+      }
+
+    }
+  }
+
+  @media (max-width: 736px) {
+    .banner__container {
+      width: 100%;
+      margin: 0 36.2031px;
+      padding: 15px;
+
+      .banner__hdl {
+        display: block;
+        font-size: 29.3333px;
+      }
+      .banner__txt {
+        font-size: 22px;
+      }
+      .box__btn {
+        padding: 0;
+        .banner__btn {
+          font-size: 18.3333px;
+        }
+      }
+    }
+  }
+
+}
